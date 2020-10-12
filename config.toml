@@ -33,6 +33,10 @@ disqusShortname = "yourdiscussshortname"
     url = "/category/"
     weight = 2
   [[menu.nav]]
+    name = "Source"
+    url = "https://github.com/illallangi/illallangi.com"
+    weight = 3
+  [[menu.nav]]
     name = "RSS"
     url = "/index.xml"
-    weight = 3
+    weight = 4
