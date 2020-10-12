@@ -1,0 +1,33 @@
+---
+name: Build
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches:
+    - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      id: checkout
+      uses: actions/checkout@v2
+      with:
+        submodules: true
+        fetch-depth: 0
+
+    - name: Setup
+      id: setup
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: latest
+
+    - name: Build
+      id: build
+      run: hugo --minify
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        cname: illallangi.com
