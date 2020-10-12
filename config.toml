@@ -29,7 +29,7 @@ disqusShortname = "yourdiscussshortname"
     url = "/"
     weight = 1
   [[menu.nav]]
-    name = "Tags"
+    name = "Categories"
     url = "/category/"
     weight = 2
   [[menu.nav]]
